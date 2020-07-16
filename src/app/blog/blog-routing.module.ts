@@ -8,6 +8,7 @@ const routes: Routes = [
     path: ':slug',
     component: BlogComponent,
   },
+  { path: '', loadChildren: () => import('../blog-root/blog-root.module').then(m => m.BlogRootModule), pathMatch: 'full' },
   {
     path: '**',
     component: BlogComponent,
